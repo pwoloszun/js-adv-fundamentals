@@ -12,3 +12,11 @@ function callInContext(fn, contextObj) {
 * */
 function log() {
 }
+
+/*
+* Binds function fn to context contextObj, and returns binded function
+* Each time binded function is called, its called in context of contextObj
+* */
+function bind(contextObj, fn) {
+
+}
