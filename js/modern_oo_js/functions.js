@@ -14,8 +14,6 @@ function argsToString() {
 function argsToArray() {
 }
 
-// Wywola funkcje fn z dowolna iloscia pozostalych parametrow
-// (fn, arg1, arg2, ..., argN) => fn(arg1, arg2, ...,  argN)
 /*
  * Calls function passed as first parameter fn, with every other param passed to it
  * Usage:
@@ -23,5 +21,13 @@ function argsToArray() {
  * callWithArgs(myFunction, [], "a", 123) => myFunction([], "a", 123)
  * */
 function callWithArgs(fn) {
-  fn()
+}
+
+function callWithArgsExampleUsage() {
+  var myFunction = function() {
+    console.log(arguments);
+  };
+
+  myFunction(1, "qq", []);
+  callWithArgs(myFunction, 1, "qq", []);
 }

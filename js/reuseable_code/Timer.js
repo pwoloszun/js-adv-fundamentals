@@ -1,3 +1,6 @@
+// var intervalId = setInterval(fn, delay);
+// clearInterval(intervalId);
+
 function counterExampleUsage() {
   var params = {
     duration: 20, // in sec, default: Infinity
@@ -7,31 +10,39 @@ function counterExampleUsage() {
 
   // on(eventName, listener) - assigns listener to given eventName ("start", "pause", "tick", "end")
   // triggered when timer is started
-  timer.on("start", function(currentTime) {
-    log("started at: " + currentTime);
+  timer.on("start", function(currentStep) {
+    console.log("started at: " + currentStep);
   });
 
   // triggered when timer finishes or has been stoped
-  timer.on("end", function(currentTime) {
-    log("ended at: " + currentTime);
+  timer.on("end", function(currentStep) {
+    console.log("ended at: " + currentStep);
   });
 
   // triggered when timer is paused
-  timer.on("pause", function(currentTime) {
-    log("paused at: " + currentTime);
+  timer.on("pause", function(currentStep) {
+    console.log("paused at: " + currentStep);
   });
 
   // triggers every step seconds
-  timer.on("tick", function(currentTime) {
-    log("current time: " + currentTime);
+  timer.on("tick", function(currentStep) {
+    console.log("current time: " + currentStep);
   });
 
   // start() - starts timer
   timer.start();
 
-  // pause() - pauses counter
-  timer.pause();
+  // pause() - pauses timer
+  setTimeout(function() {
+    timer.pause();
+  }, 5000);
 
-  // stop() - stops counter
-  timer.stop();
+  setTimeout(function() {
+    timer.start(); // resumes timer
+  }, 7000);
+
+  // stop() - stops timer
+  setTimeout(function() {
+    timer.stop();
+  }, 12000);
 }
