@@ -1,6 +1,11 @@
 Object.prototype.myMethod = function(param1, param2) {
 };
 
+for (var propertyName in obj) {
+
+}
+
+
 /*
  * Usage:
  * {name: "Bob", age: 22}.keys() => ['name', 'age']

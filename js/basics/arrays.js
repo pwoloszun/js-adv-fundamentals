@@ -7,7 +7,7 @@ Array.prototype.myMethod = function(param1, param2) {
  * [].empty() => true
  * ["xxx"].empty() => false
  * */
-function empty() {
+function isEmpty() {
 }
 
 /*
@@ -18,12 +18,13 @@ function empty() {
 function include(obj) {
 }
 
-/* unit() usage:
- * [1,2,3,1,1,2,1].unique() => [1, 2, 3]
+/* uniq() usage:
+ * [1,2,3,1,1,2,1].uniq() => [1, 2, 3]
  * */
 function uniq() {
 }
 
+// arr.splice(index, deleteCount, objToInsert1, objToInsert2, ...);
 /*
  * insertAt(index, object) usage:
  * ["a", "b", "c"].insertAt(1, "xxx") => ["a", "xxx", "b", "c"]
@@ -44,7 +45,7 @@ function deleteAt(index) {
  * [1, 2, 3, 4].shuffle() => [2, 4, 1, 3]
  *
  * */
-function shuffle(array) {
+function shuffle() {
 }
 
 /*

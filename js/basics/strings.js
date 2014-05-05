@@ -10,6 +10,8 @@ function reverse(string) {
  * reverse("abc xyz") => "cba zyx"
  * */
 function reverseEachWord(string) {
+  //var arr = string.split("|")
+  //arr.join("#")
 }
 
 /*

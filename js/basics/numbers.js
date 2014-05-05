@@ -4,7 +4,14 @@
  * odd(7) => true
  * */
 function odd(number) { // true/false
+  if (true) {
+
+  } else {
+
+  }
+  return 123;
 }
+
 
 /*
  * Init var currentValue with 2;
