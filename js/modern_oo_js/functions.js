@@ -6,6 +6,12 @@
 function argsToString() {
 }
 
+function argsToStringExampleUsage() {
+  argsToString(1, 'qq', [], 997); // => "1, qq, Object[], 997"
+}
+//argsToStringExampleUsage();
+
+
 /*
  * Returns an Array instance containing all arguments passed to function
  * Usage:
@@ -21,6 +27,7 @@ function argsToArray() {
  * callWithArgs(myFunction, [], "a", 123) => myFunction([], "a", 123)
  * */
 function callWithArgs(fn) {
+
 }
 
 function callWithArgsExampleUsage() {
@@ -29,5 +36,6 @@ function callWithArgsExampleUsage() {
   };
 
   myFunction(1, "qq", []);
-  callWithArgs(myFunction, 1, "qq", []);
+  callWithArgs(myFunction, 1, "qq", []); // => 1, "qq", []
 }
+//callWithArgsExampleUsage();
