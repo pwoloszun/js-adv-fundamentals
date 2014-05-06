@@ -15,38 +15,59 @@ Array.prototype.myMethod = function(param1, param2) {
 
 /*
  * Calls function fn for each element of array
- * Usage:
- * [1,2,3].each(function(i) {
- *   log(i);
- * }) => logs on console: 1, 2, 3
  * */
 function each(fn) {
 }
 
+function eachExampleUsages() {
+  ["bob", "ed", "kate"].each(function(name) {
+    console.log("Hi " + name);
+  });// => logs on console: "Hi Bob", "Hi Kate", "Hi Ed"
+
+  [1, 2, 3, 4].each(function(i) {
+    console.log(i);
+  }); // => logs on console: 1, 2, 3, 4
+}
+//eachExampleUsages();
+
+
 /*
  * Maps array using function fn
- * Usage:
- * ["Kate", "Bob"].map(function(name) {
- *   return "Hello " + name;
- * }) => ["Hello Kate", "Hello Bob"]
  * */
 function map(fn) {
 }
 
+function mapExampleUsage() {
+  var squares = [1, 2, 3].map(function(i) {
+    return i * i;
+  }); // => [1, 4, 9]
+
+  var greetings = ["Bob", "Ed"].map(function(name) {
+    return "Hi " + name + "!";
+  }); // => ["Hi Bob!", "Hi Ed!"]
+}
+//mapExampleUsage();
+
+
 /*
  * Filters array using boolean function fn and returns new instance
  * containing only filtered elements
- * Usage:
- * [1,2,3,4].filter(function(i) {
- *  return i % 2 === 0;
- * }) => [2, 4]
- *
- * ["Kate", "Bob", "Ed", "Ben"].filter(function(name) {
- *  return name[0] === "B";
- * }) => ["Bob", "Ben"]
  * */
 function filter(fn) {
 }
+
+function filterExampleUsage() {
+  var odds = [1, 2, 3, 4].filter(function(i) {
+    return i % 2 === 1;
+  }); // => [1, 3]
+
+  var firstLetter = "B";
+  var startingWithFirstLetter = ["Kate", "Bob", "Ed", "Ben"].filter(function(name) {
+    return name[0].toUpperCase() === firstLetter;
+  }); // => ["Bob", "Ben"]
+}
+//filterExampleUsage();
+
 
 /*
  * Checks if all elements of array satisfy conditions of boolean function fn
@@ -96,10 +117,24 @@ function inGroupsOf(groupSize, fillWith) {
 }
 
 /*
-* Returns first (from left) element which satisfy boolean function fn
-* */
+ * Returns first (from left) element which satisfy boolean function fn
+ * */
 function find(fn) {
 }
 
 function uniq(fn) {
 }
+
+
+function Person() {
+
+}
+
+Person.prototype.getName = function() {
+};
+
+bob = new Person("Bob")
+bob.getName();
+kate = new Person("kate")
+kate.getName();
+
