@@ -46,3 +46,4 @@ function counterExampleUsage() {
     timer.stop();
   }, 12000);
 }
+//counterExampleUsage();
