@@ -4,6 +4,7 @@
  * odd(7) => true
  * */
 function odd(number) { // true/false
+  return 1;
 }
 
 
@@ -20,6 +21,7 @@ function toInfinity() {
  * Returns pseudo random number between [0, max)
  * */
 function random(max) {
+//  Math.random();
 }
 
 /*

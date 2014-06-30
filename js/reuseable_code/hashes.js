@@ -1,8 +1,9 @@
 Object.prototype.myMethod = function(param1, param2) {
+  // this === object instance
 };
 
+var obj = {name: "Bobs"};
 for (var propertyName in obj) {
-
 }
 
 
