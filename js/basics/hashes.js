@@ -6,7 +6,6 @@ var obj = {name: "Bobs"};
 for (var propertyName in obj) {
 }
 
-
 /*
  * Usage:
  * {name: "Bob", age: 22}.keys() => ['name', 'age']
