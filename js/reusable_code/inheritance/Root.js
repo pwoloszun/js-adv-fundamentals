@@ -6,20 +6,21 @@ var Root = extend(User, {
   },
 //  getLogin: function() {
 //    var superVal = this.super("getLogin", arguments);
-//    return "SU: " + superVal;
+//    return "ROOT: " + superVal;
 //  },
   getPermissions: function() {
     // ...
   }
 });
 
-function extendExampleUsage() {
-  var root = new Root("bob", ["r", "w", "d", "u"]);
-  console.log(root.getLogin());
-  console.log(root.getPermissions());
+function testRoot(Root) {
+  var login = "ed";
+  var perms = ["r", "w", "d", "u"];
+
+  var root = new Root(login, perms);
+
+  assertEqual(root.constructor, Root);
+//  assertEqual(root.getLogin(), "ROOT: " + login);
+  assertEqual(root.getPermissions(), perms);
 }
-
-
-var Human = extend(Animal, {
-  speak: function() {}
-});
+testRoot(Root);
