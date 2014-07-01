@@ -1,5 +1,6 @@
 // var intervalId = setInterval(fn, delay);
 // clearInterval(intervalId);
+// reuse modules: mixin, Evented
 
 function counterExampleUsage() {
   var params = {
@@ -14,7 +15,7 @@ function counterExampleUsage() {
     console.log("started at: " + currentStep);
   });
 
-  // triggered when timer finishes or has been stoped
+  // triggered when timer finishes or has been stopped
   timer.on("end", function(currentStep) {
     console.log("ended at: " + currentStep);
   });
@@ -33,17 +34,17 @@ function counterExampleUsage() {
   timer.start();
 
   // pause() - pauses timer
-  setTimeout(function() {
-    timer.pause();
-  }, 5000);
-
-  setTimeout(function() {
-    timer.start(); // resumes timer
-  }, 7000);
-
-  // stop() - stops timer
-  setTimeout(function() {
-    timer.stop();
-  }, 12000);
+//  setTimeout(function() {
+//    timer.pause();
+//  }, 5000);
+//
+//  setTimeout(function() {
+//    timer.start(); // resumes timer
+//  }, 7000);
+//
+//  // stop() - stops timer
+//  setTimeout(function() {
+//    timer.stop();
+//  }, 12000);
 }
 //counterExampleUsage();
