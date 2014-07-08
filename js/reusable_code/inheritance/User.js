@@ -17,7 +17,7 @@ function testUser() {
   });
 
   var login = "ed";
-  var user = new User(login, perms);
+  var user = new User(login);
 
   assertEqual(user.constructor, User);
   assertEqual(user.getLogin(), login);
