@@ -26,12 +26,22 @@ function adminTest(Admin) {
     password: passwd
   });
 
-  assertEqual(admin.uuid, 0);
+  assertEqual(admin.uuid, 1);
   assertEqual(admin.getLogin(), login);
   login = "kate";
   admin.setLogin(login);
   assertEqual(admin.getLogin(), login);
   assertEqual(admin.getEncodedPassword(), passwd + "imba!");
+
+  var login2 = "Kate";
+  var passwd2 = "#huhu!";
+  var admin2 = new Admin({
+    login: login1,
+    password: passwd2
+  });
+  assertEqual(admin2.uuid, 2);
+  assertEqual(admin2.getLogin(), login2);
+  assertEqual(admin.getEncodedPassword(), passwd2 + "imba!");
 }
 
 //adminTest(MyApp.Models.Admin);
