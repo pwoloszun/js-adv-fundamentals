@@ -1,4 +1,4 @@
-function rangeExampleUsage() {
+function rangeExampleUsage(Range) {
   // Konstruktor przyjmuje dwa parametry: start i end, definiujące poczatek i koniec obustronnie domknietego przedziału <start, end>
   /*
    * Range represents a [start..end) range
