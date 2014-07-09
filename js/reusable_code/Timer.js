@@ -1,8 +1,11 @@
+// var timeoutId = setTimeout(fn, delay);
+// clearTimeout(timeoutId);
+
 // var intervalId = setInterval(fn, delay);
 // clearInterval(intervalId);
 // reuse modules: mixin, Evented
 
-function counterExampleUsage() {
+function timerExampleUsage() {
   var params = {
     duration: 20, // in sec, default: Infinity
     step: 2 // in sec, default: 1
