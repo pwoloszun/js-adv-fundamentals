@@ -36,24 +36,23 @@ function timerExampleUsage() {
   // start() - starts timer
   timer.start();
 
-  // pause() - pauses timer
-  setTimeout(function() {
-    timer.pause();
-  }, 5000);
-
-  setTimeout(function() {
-    timer.start(); // resumes timer
-  }, 7000);
-
-  // stop() - stops timer
-  setTimeout(function() {
-    timer.stop();
-  }, 12000);
-
-  // start again from currentStep == 0
-  setTimeout(function() {
-    timer.start();
-  }, 16000);
-
+//  // pause() - pauses timer
+//  setTimeout(function() {
+//    timer.pause();
+//  }, 5000);
+//
+//  setTimeout(function() {
+//    timer.start(); // resumes timer
+//  }, 8000);
+//
+//  // stop() - stops timer
+//  setTimeout(function() {
+//    timer.stop();
+//  }, 14000);
+//
+//  // start again from currentStep == 0
+//  setTimeout(function() {
+//    timer.start();
+//  }, 19000);
 }
 //timerExampleUsage();
