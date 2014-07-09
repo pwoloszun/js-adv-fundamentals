@@ -37,17 +37,23 @@ function timerExampleUsage() {
   timer.start();
 
   // pause() - pauses timer
-//  setTimeout(function() {
-//    timer.pause();
-//  }, 5000);
-//
-//  setTimeout(function() {
-//    timer.start(); // resumes timer
-//  }, 7000);
-//
-//  // stop() - stops timer
-//  setTimeout(function() {
-//    timer.stop();
-//  }, 12000);
+  setTimeout(function() {
+    timer.pause();
+  }, 5000);
+
+  setTimeout(function() {
+    timer.start(); // resumes timer
+  }, 7000);
+
+  // stop() - stops timer
+  setTimeout(function() {
+    timer.stop();
+  }, 12000);
+
+  // start again from currentStep == 0
+  setTimeout(function() {
+    timer.start();
+  }, 16000);
+
 }
-//counterExampleUsage();
+//timerExampleUsage();
