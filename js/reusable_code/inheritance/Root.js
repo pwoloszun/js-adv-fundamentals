@@ -9,7 +9,7 @@ var Root = extend(User, {
 //    return "ROOT: " + superVal;
 //  },
   getPermissions: function() {
-    // ...
+    return this.perms;
   }
 });
 

@@ -1,11 +1,3 @@
-function User(login) {
-  this.login = login;
-}
-
-User.prototype.getLogin = function() {
-  return this.login;
-};
-
 function testUser() {
   var User = extend(null, {
     constructor: function(login) {
