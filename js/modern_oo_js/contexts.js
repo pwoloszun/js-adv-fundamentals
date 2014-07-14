@@ -8,18 +8,20 @@ function callInContext(fn, contextObj) {
 }
 
 function callInContextExampleUsage() {
-  var myFunction = function() {
+  var myFunction = function(str, int) {
     // this === bob
     console.log(this, arguments);
+    return Math.random();
   };
 
   var bob = {
     name: "Bob"
   };
 
-  callInContext(myFunction, bob, "www", 997);
+  var result = callInContext(myFunction, bob, "www", 997);
+  console.log(result);
 }
-
+//callInContextExampleUsage();
 
 /*
  * console.log() shortcut

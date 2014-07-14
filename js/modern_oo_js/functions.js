@@ -7,7 +7,8 @@ function argsToString() {
 }
 
 function argsToStringExampleUsage() {
-  argsToString(1, 'qq', [], 997); // => "1, qq, Object[], 997"
+  var result = argsToString(1, 'qq', [], 997); // => "1, qq, Object[], 997"
+  console.log(result);
 }
 //argsToStringExampleUsage();
 
