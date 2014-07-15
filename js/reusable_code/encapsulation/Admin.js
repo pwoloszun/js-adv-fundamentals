@@ -10,7 +10,7 @@
  * + setLogin(value)
  * + getEncodedPassword()
  * Private methods:
- * - _encodePassword(passwd) (encoded using private static property ENCODING_STR)
+ * - _encodePassword(passwd) (encoded using private static property ENCODING_KEY)
  * Private static properties:
  * - NEXT_UUID = 0
  * - ENCODING_KEY = "imba!"
