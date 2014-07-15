@@ -21,6 +21,7 @@ function testRoot(Root) {
 
   assertEqual(root.constructor, Root);
 //  assertEqual(root.getLogin(), "ROOT: " + login);
+  assertEqual(root.getLogin(), login);
   assertEqual(root.getPermissions(), perms);
 }
 testRoot(Root);
