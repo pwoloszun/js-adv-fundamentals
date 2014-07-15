@@ -36,12 +36,12 @@ function adminTest(Admin) {
   var login2 = "Kate";
   var passwd2 = "#huhu!";
   var admin2 = new Admin({
-    login: login1,
+    login: login2,
     password: passwd2
   });
   assertEqual(admin2.uuid, 2);
   assertEqual(admin2.getLogin(), login2);
-  assertEqual(admin.getEncodedPassword(), passwd2 + "imba!");
+  assertEqual(admin2.getEncodedPassword(), passwd2 + "imba!");
 }
 
 //adminTest(MyApp.Models.Admin);
