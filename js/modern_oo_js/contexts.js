@@ -37,24 +37,30 @@ function bind(contextObj, fn) {
 
 }
 
-function bindExampleUsage() {
-  var bob = {name: "Bob"};
-  var myFn = function() {
-    console.log(this, arguments);
-    return Math.random();
+function bindTest() {
+  var bob = {
+    name: "Bob",
+    age: 12
   };
+  var myFn = function() {
+    assertEqual(this, bob);
+    console.log(this, arguments);
+    return this.age;
+  };
+
   var bindedFn = bind(bob, myFn);
 
   var result = bindedFn(123, "qq!");// this === bob
-  console.log("1st result:", result);
+  assertEqual(bob.age, result);
 
   result = bindedFn.apply({name: "Kate"}, [123, "qq!"]);// this === bob
-  console.log("2nd result:", result);
+  assertEqual(bob.age, result);
 
   var ed = {
     name: "Ed",
     myMethod: bindedFn
   };
   result = ed.myMethod(); // this === bob
-  console.log("3rd result:", result);
+  assertEqual(bob.age, result);
 }
+//bindTest();
