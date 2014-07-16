@@ -1,13 +1,12 @@
 var Root = extend(User, {
   constructor: function(login, perms) {
-//    this.super("constructor", arguments);
-    this.login = login;
+    this.super("constructor", arguments);
     this.perms = perms;
   },
-//  getLogin: function() {
-//    var superVal = this.super("getLogin", arguments);
-//    return "ROOT: " + superVal;
-//  },
+  getLogin: function() {
+    var superVal = this.super("getLogin", arguments);
+    return "ROOT: " + superVal;
+  },
   getPermissions: function() {
     return this.perms;
   }
@@ -20,8 +19,7 @@ function testRoot(Root) {
   var root = new Root(login, perms);
 
   assertEqual(root.constructor, Root);
-//  assertEqual(root.getLogin(), "ROOT: " + login); // overridden
-  assertEqual(root.getLogin(), login); // inherited from User
+  assertEqual(root.getLogin(), "ROOT: " + login); // overridden
   assertEqual(root.getPermissions(), perms);
 }
 testRoot(Root);
