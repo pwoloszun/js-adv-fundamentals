@@ -15,3 +15,4 @@ function testUser() {
   assertEqual(user.getLogin(), login);
 }
 testUser();
+

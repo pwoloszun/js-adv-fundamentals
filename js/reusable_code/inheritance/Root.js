@@ -20,8 +20,8 @@ function testRoot(Root) {
   var root = new Root(login, perms);
 
   assertEqual(root.constructor, Root);
-//  assertEqual(root.getLogin(), "ROOT: " + login);
-  assertEqual(root.getLogin(), login);
+//  assertEqual(root.getLogin(), "ROOT: " + login); // overridden
+  assertEqual(root.getLogin(), login); // inherited from User
   assertEqual(root.getPermissions(), perms);
 }
 testRoot(Root);
