@@ -1,9 +1,7 @@
 /*
  * new Admin(params) class:
  * Public properties:
- * + uuid (generated using private static property NEXT_UUID)
- * Private properties:
- * - login
+ * + uuid (generated using private static method _generateUuid()
  * - password
  * Privileged methods:
  * + getLogin()
