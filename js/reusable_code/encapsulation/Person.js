@@ -16,4 +16,4 @@ Person.prototype.getAge = function() {
 };
 
 var bob = new Person("Bob", "1996-01-14");
-console.log(bob.getAge());
+console.log(bob.getName(), bob.getAge());
