@@ -1,6 +1,6 @@
 function Person(name, dateOfBirth) {
   this.name = name;
-  this.dateOfBirth - dateOfBirth;
+  this.dateOfBirth = dateOfBirth;
 }
 
 Person.prototype.getName = function() {
@@ -8,6 +8,12 @@ Person.prototype.getName = function() {
 };
 
 Person.prototype.getAge = function() {
-  var age = Date.now().getTime() - (new Date(this.dateOfBirth)).getTime();
-  return this.name;
+  var msInYear = 365 * 24 * 60 * 60 * 1000;
+  var nowMs = Date.now();
+  var dobMs = (new Date(this.dateOfBirth)).getTime()
+  var age = nowMs - dobMs;
+  return age / msInYear;
 };
+
+var bob = new Person("Bob", "1996-01-14");
+console.log(bob.getAge());
