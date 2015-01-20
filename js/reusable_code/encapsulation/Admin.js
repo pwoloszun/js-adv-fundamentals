@@ -2,6 +2,7 @@
  * new Admin(params) class:
  * Public properties:
  * + uuid (generated using private static method _generateUuid()
+ * Private properties:
  * - password
  * Privileged methods:
  * + getLogin()
@@ -13,7 +14,7 @@
  * - NEXT_UUID = 0
  * - ENCODING_KEY = "imba!"
  * Private static methods:
- * - _generateUuid() (generates next uniq UUID)
+ * - _GENERATE_UUID() (generates next uniq UUID)
  * */
 function adminTest(Admin) {
   var login = "Bob";
