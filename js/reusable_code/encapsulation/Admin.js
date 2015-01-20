@@ -1,7 +1,7 @@
 /*
  * new Admin(params) class:
  * Public properties:
- * + uuid (generated using private static method _generateUuid()
+ * + uuid (generated using private static method _GENERATE_UUID()
  * Private properties:
  * - password
  * Privileged methods:
