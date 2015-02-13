@@ -3,6 +3,7 @@
  * Public properties:
  * + uuid (generated using private static method _GENERATE_UUID()
  * Private properties:
+ * - login
  * - password
  * Privileged methods:
  * + getLogin()
@@ -22,7 +23,8 @@ function adminTest(Admin) {
 
   var admin = new Admin({
     login: login,
-    password: passwd
+    password: passwd,
+    age:123
   });
 
   assertEqual(admin.uuid, 1);
