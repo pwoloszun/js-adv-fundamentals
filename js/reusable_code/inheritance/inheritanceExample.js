@@ -14,7 +14,6 @@ function SuperHero(name, powers) {
 }
 
 SuperHero.prototype = new Human();
-SuperHero.prototype.constructor = SuperHero;
 
 SuperHero.prototype.getName = function() {
   return this.name + "!!!!!!!";
