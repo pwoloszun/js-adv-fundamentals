@@ -18,7 +18,6 @@ function testRoot(Root) {
 
   var root = new Root(login, perms);
 
-  assertEqual(root.constructor, Root);
   assertEqual(root.getLogin(), "ROOT: " + login); // overridden
   assertEqual(root.getPermissions(), perms);
 }

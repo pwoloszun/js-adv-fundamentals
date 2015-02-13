@@ -14,7 +14,6 @@ function testSuperUser(SuperUser) {
 
   var su = new SuperUser(login, passwd);
 
-  assertEqual(su.constructor, SuperUser);
   assertEqual(su.getLogin(), login); // inherited from User
   assertEqual(su.getPassword(), passwd);
 }
