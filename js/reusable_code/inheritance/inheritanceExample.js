@@ -19,6 +19,7 @@ SuperHero.prototype.getName = function() {
   return this.name + "!!!!!!!";
 };
 
+// client_code.js
 var batman = new SuperHero("Batman", ["fight", "dangerous look"]);
 
 console.log("is Human", batman instanceof Human);
