@@ -4,10 +4,11 @@ function outerFn() {
   var xxx = "outerFn";
 
   function innerFn1() {
-    var xxx = "innerFn1";
+    xxx = "innerFn1";
 
     function innerFn2() {
-      var z = "innerFn2";
+      var xxx = "innerFn2";
+
     }
 
     innerFn2();
