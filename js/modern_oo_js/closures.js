@@ -20,11 +20,13 @@ function each(fn) {
 }
 
 function eachExampleUsages() {
-  ["bob", "ed", "kate"].each(function(name) {
+  var names = ["bob", "ed", "kate"];
+  names.each(function(name) {
     console.log("Hi " + name);
   });// => logs on console: "Hi Bob", "Hi Kate", "Hi Ed"
 
-  [1, 2, 3, 4].each(function(i) {
+  var ints = [1, 2, 3, 4];
+  ints.each(function(i) {
     console.log(i);
   }); // => logs on console: 1, 2, 3, 4
 }
