@@ -22,7 +22,7 @@ function callInContextExampleUsage() {
   };
 
   var result = callInContext(myFunction, bob, "www", 997);
-  console.log(result);
+  console.log("myFunction result == ", result);
 }
 //callInContextExampleUsage();
 
