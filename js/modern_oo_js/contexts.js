@@ -10,7 +10,10 @@ function callInContext(fn, contextObj) {
 function callInContextExampleUsage() {
   var myFunction = function(str, int) {
     // this === bob
-    console.log(this, arguments);
+    console.log("context == ", this);
+    console.log("str == ", str);
+    console.log("int == ", int);
+    console.log("args == ", arguments);
     return Math.random();
   };
 
