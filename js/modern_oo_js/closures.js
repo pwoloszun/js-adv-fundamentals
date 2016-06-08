@@ -47,6 +47,7 @@ function mapExampleUsage() {
   var greetings = ["Bob", "Ed"].map(function(name) {
     return "Hi " + name + "!";
   }); // => ["Hi Bob!", "Hi Ed!"]
+  console.log(squares, greetings);
 }
 //mapExampleUsage();
 
@@ -126,17 +127,3 @@ function find(fn) {
 
 function uniq(fn) {
 }
-
-
-function Person() {
-
-}
-
-Person.prototype.getName = function() {
-};
-
-bob = new Person("Bob")
-bob.getName();
-kate = new Person("kate")
-kate.getName();
-
