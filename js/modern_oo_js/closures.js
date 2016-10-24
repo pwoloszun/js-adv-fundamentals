@@ -10,7 +10,7 @@ function times(fn) {
 }
 
 // method definition example
-Array.prototype.myMethod = function(param1, param2) {
+Array.prototype.myMethod = function (param1, param2) {
 };
 
 /*
@@ -21,12 +21,12 @@ function each(fn) {
 
 function eachExampleUsages() {
   var names = ["bob", "ed", "kate"];
-  names.each(function(name) {
+  names.each(function (name) {
     console.log("Hi " + name);
   });// => logs on console: "Hi Bob", "Hi Kate", "Hi Ed"
 
   var ints = [1, 2, 3, 4];
-  ints.each(function(i) {
+  ints.each(function (i) {
     console.log(i);
   }); // => logs on console: 1, 2, 3, 4
 }
@@ -40,14 +40,14 @@ function map(fn) {
 }
 
 function mapExampleUsage() {
-  var squares = [1, 2, 3].map(function(i) {
+  var squares = [1, 2, 3].map(function (i) {
     return i * i;
   }); // => [1, 4, 9]
 
-  var greetings = ["Bob", "Ed"].map(function(name) {
+  var greetings = ["Bob", "Ed"].map(function (name) {
     return "Hi " + name + "!";
   }); // => ["Hi Bob!", "Hi Ed!"]
-  console.log(squares, greetings);
+  console.log("squares", squares, "greetings", greetings);
 }
 //mapExampleUsage();
 
@@ -60,14 +60,15 @@ function filter(fn) {
 }
 
 function filterExampleUsage() {
-  var odds = [1, 2, 3, 4].filter(function(i) {
+  var odds = [1, 2, 3, 4].filter(function (i) {
     return i % 2 === 1;
   }); // => [1, 3]
 
   var firstLetter = "B";
-  var startingWithFirstLetter = ["Kate", "Bob", "Ed", "Ben"].filter(function(name) {
+  var startingWithFirstLetter = ["Kate", "Bob", "Ed", "Ben"].filter(function (name) {
     return name[0].toUpperCase() === firstLetter;
   }); // => ["Bob", "Ben"]
+  console.log("odd numbers", odds, "names on B", startingWithFirstLetter);
 }
 //filterExampleUsage();
 
@@ -85,6 +86,17 @@ function filterExampleUsage() {
  * */
 function all(fn) {
 }
+
+function allExampleUsage() {
+  var allEven = [1, 2, 3].all(function (i) {
+    return i % 2 === 0;
+  });
+  var allStartWithB = ["Bob", "Ben", "Bison"].all(function (name) {
+    return name[0] === "B";
+  });
+  console.log("all even", allEven, "all start with B", allStartWithB);
+}
+// allExampleUsage();
 
 /* shuffle() usage:
  * [1, 2, 3, 4].shuffle() => [2, 4, 1, 3]
